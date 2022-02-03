@@ -1,0 +1,62 @@
+<!--
+@license
+Copyright 2022 Google. All Rights Reserved.
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+-->
+
+<!DOCTYPE html>
+<meta charset='utf-8'>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+
+
+<h1>Colormap Curves</h1>
+
+<p>Use <a href='https://www.vis4.net/blog/2013/09/mastering-multi-hued-color-scales/'>Bézier curves</a> through different color spaces to create a scale from the colors below. Based on Gregor Aisch's <a href='https://gka.github.io/palettes'>Color Palette Helper</a>.
+
+<p>Open the <a href='../comparison/'>Colormap Comparison</a> tool in a new window to see your data transformed by the color scale.
+
+<div class='color-input'></div>
+<br>
+<div class='bands'></div>
+<div class='spaces'></div>
+<br>
+<div class='band'></div>
+
+<div>
+  <label for='numTicks'>Number of output colors: </label>
+  <input type='number' class='numTicks' name='numTicks' min='3' max='255'>
+</div>
+
+<br>
+<div class='output-colors'></div>
+
+
+<p style='padding-top:40px;'><a class='description link' href='https://github.com/PAIR-code/colormap/'>github.com/PAIR-code/colormap</a>
+
+
+
+<script src='../third_party/d3_.js'></script>
+
+<script src='init-band.js'></script>
+<script src='init-color-input.js'></script>
+<script src='init-line.js'></script>
+<script src='init-num-ticks.js'></script>
+<script src='init-output-colors.js'></script>
+<script src='init-spaces.js'></script>
+<script src='init-space-band.js'></script>
+<script src='init-util.js'></script>
+
+
+<script src='script.js'></script>
