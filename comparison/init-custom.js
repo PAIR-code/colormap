@@ -24,9 +24,11 @@ window.initCustom = function(){
 
   var bc = new BroadcastChannel('CustomGray')
   bc.onmessage = function(bcSamples){
+    if (bcSamples.data == 'force-render') return
+
     rv.samples = bcSamples.data
-    rv.samples[config.nSamples -1] = [255, 255, 255]
-    rv.samples[config.nSamples] = [255, 255, 255]
+    rv.samples[config.nSamples - 1] = [255, 255, 255]
+    rv.samples[config.nSamples + 0] = [255, 255, 255]
     rv.samples[config.nSamples + 1] = [255, 255, 255]
     rv.samples[config.nSamples + 2] = [255, 255, 255]
     rv.samples[config.nSamples + 3] = [255, 255, 255]
@@ -39,6 +41,8 @@ window.initCustom = function(){
         d.update()
       })
   }
+
+  bc.postMessage('force-render')
 
   return rv
 }

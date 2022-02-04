@@ -111,6 +111,10 @@ function drawColor(color){
     bc.postMessage(samples)
   }
   render()
+
+  bc.onmessage = function({data}){
+    if (data == 'force-render') window.render()
+  }
 }
 
 

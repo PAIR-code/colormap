@@ -75,5 +75,9 @@ window.initUtil = function(){
     bc.postMessage(samples)
   }
 
+  bc.onmessage = function({data}){
+    if (data == 'force-render') window.render()
+  }
+
   return {params, formatHex, broadcastScale}
 }
