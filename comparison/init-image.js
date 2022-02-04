@@ -15,7 +15,7 @@ limitations under the License.
 
 
 window.initImage = async function(){
-  d3.select('#import').node().value = params.get('img') || 'data/0.png'
+  d3.select('#import').node().value = params.get('img') || 'data/8bit.png'
   d3.select('#import').on('change', update)
 
   function dropHandler(ev) {
