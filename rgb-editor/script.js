@@ -19,7 +19,7 @@ console.clear()
 window.config = {
   nSamples: 1024, // number of colors in each map
 }
-var bc = new BroadcastChannel('CustomGray')
+var bc = new BroadcastChannel('custom-colormap')
 
 
 var colors = ['R', 'G', 'B'].map(d => {

@@ -65,7 +65,7 @@ window.initUtil = function(){
     }
   }
 
-  var bc = new BroadcastChannel('CustomGray')
+  var bc = new BroadcastChannel('custom-colormap')
   function broadcastScale(scale){
     var n = 1024
     var samples = d3.range(n).map(i => {

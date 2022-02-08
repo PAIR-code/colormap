@@ -22,7 +22,7 @@ window.initCustom = function(){
     return [v, v, v]
   })
 
-  var bc = new BroadcastChannel('Custom')
+  var bc = new BroadcastChannel('custom-colormap')
   bc.onmessage = function(bcSamples){
     if (bcSamples.data == 'force-render') return
 
