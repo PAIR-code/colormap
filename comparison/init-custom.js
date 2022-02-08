@@ -22,7 +22,7 @@ window.initCustom = function(){
     return [v, v, v]
   })
 
-  var bc = new BroadcastChannel('CustomGray')
+  var bc = new BroadcastChannel('Custom')
   bc.onmessage = function(bcSamples){
     if (bcSamples.data == 'force-render') return
 
@@ -35,7 +35,7 @@ window.initCustom = function(){
     rv.samples[config.nSamples + 4] = [255, 255, 255]
 
     scales
-      .filter(d => d.name == 'CustomGray')
+      .filter(d => d.name == 'Custom')
       .forEach(d => {
         d.samples = rv.samples
         d.update()

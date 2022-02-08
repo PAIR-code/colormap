@@ -2,7 +2,7 @@
 
 Tools for generating and picking colormaps.
 
-- [curves](https://pair-code.github.io/colormap/curves): Adjust Bézier curves to create a colormap. 
+- [curves](https://pair-code.github.io/colormap/curves): Adjust curves through different colorspaces to create a colormap. 
 - [comparison](https://pair-code.github.io/colormap/comparison): Project data with tweakable colormaps.
 - [rgb-editor](https://pair-code.github.io/colormap/rgb-editor): Hello World example of a UI connected to the comparison tool.   
 
