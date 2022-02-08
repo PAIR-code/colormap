@@ -18,7 +18,7 @@ window.initScales = function(){
   var sel = d3.select('#image-container').html('')
 
   var diverging = 'BrBG PRGn PiYG PuOr RdBu RdGy RdYlBu RdYlGn Spectral'.split(' ')
-  var sequential = 'Turbo Viridis Inferno Custom Magma Plasma Cividis Warm Cool CubehelixDefault Rainbow Sinebow'.split(' ')
+  var sequential = 'Turbo Viridis Custom Inferno Magma Plasma Cividis Warm Cool CubehelixDefault Rainbow Sinebow'.split(' ')
   var boring = 'Blues Greens Greys Oranges Purples'.split(' ')
 
   var allScales = sequential.concat(diverging).concat(boring)
