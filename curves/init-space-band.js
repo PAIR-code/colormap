@@ -32,6 +32,9 @@ window.initSpaceBand = function(space, type, sel){
     margin: {bottom: 0, top: 10, left: 0, right: 5}
   })
 
+  c.svg.append('rect.bg-rect')
+    .at({width: c.width/3, height: 30, y: -15})
+
   c.svg.append('text')
     .text(space.ppKey + ' ' + type)
     .at({fontSize: 12, y: -2})

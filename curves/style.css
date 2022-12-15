@@ -71,7 +71,7 @@ svg{
 
 text{
   pointer-events: none;
-  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;
+/*  text-shadow: 0 1px 0 #fff, 1px 0 0 #fff, 0 -1px 0 #fff, -1px 0 0 #fff;*/
 }
 
 
@@ -117,13 +117,20 @@ text{
   fill: #333;
 }
 
-.space-band.active{
-}
 .space-band.active text{
-  fill: #000;
+  fill: #fff;
   font-weight: 900;
   /*text-decoration: underline;*/
 }
+
+
+.space-band .bg-rect{
+  opacity: 0;
+}
+.space-band.active .bg-rect{
+  opacity: 1;
+}
+
 
 
 p{
@@ -153,3 +160,4 @@ a{
 .numTicks{
   text-align: center;
 }
+

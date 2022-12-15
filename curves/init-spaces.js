@@ -15,14 +15,39 @@ limitations under the License.
 
 
 window.initSpaces = function(){
+
+  // https://observablehq.com/@fil/oklab-color-space
+  const gamma = x => (x >= 0.0031308 ? 1.055 * Math.pow(x, 1 / 2.4) - 0.055 : 12.92 * x)
+  d3.oklab = (L, a, b) => {
+    const l_ = L + 0.3963377774 * a + 0.2158037573 * b;
+    const m_ = L - 0.1055613458 * a - 0.0638541728 * b;
+    const s_ = L - 0.0894841775 * a - 1.2914855480 * b;
+    const l = l_ * l_ * l_;
+    const m = m_ * m_ * m_;
+    const s = s_ * s_ * s_;
+
+    return d3.rgb(
+      255 * gamma(+4.0767416621 * l - 3.3077115913 * m + 0.2309699292 * s),
+      255 * gamma(-1.2684380046 * l + 2.6097574011 * m - 0.3413193965 * s),
+      255 * gamma(-0.0041960863 * l - 0.7034186147 * m + 1.7076147010 * s)
+    );
+  }
+
   var spaces = {
     lab: {
       max: [100, 160, 160],
       min: [0, -160, -160],
       link: 'https://en.wikipedia.org/wiki/CIELAB_color_space#Cylindrical_representation:_CIELCh_or_CIEHLC',
       ppKey: 'L*a*b*',
-      ppKeys: ['Lightness', 'Red / Green', 'Blue / Yellow']
+      ppKeys: ['Lightness', 'Red/Green', 'Blue/Yellow']
     },
+    // oklab: {
+    //   max: [100, 160, 160],
+    //   min: [0, -160, -160],
+    //   link: 'https://bottosson.github.io/posts/oklab/',
+    //   ppKey: 'Oklab',
+    //   ppKeys: ['Lightness', 'Red/Green', 'Blue/Yellow']
+    // },
     hcl: {
       max: [360, 230, 100],
       link: 'https://en.wikipedia.org/wiki/HCL_color_space',
