@@ -136,6 +136,7 @@ text{
 p{
   max-width: 600px;
   line-height: 1.4em;
+  margin-bottom: 40px;
 }
 
 input[type="color"] {
@@ -161,3 +162,25 @@ a{
   text-align: center;
 }
 
+.bands, .spaces{
+  position: relative;
+}
+
+.annotation{
+  font-size: 12px;
+  line-height: 1em;
+  position: absolute;
+  font-style: italic;
+}
+
+.bands .annotation{
+  right: -120px;
+  width: 130px;
+  top: 50%;
+}
+
+.spaces .annotation{
+  right: -120px;
+  width: 130px;
+  top: 70px;
+}

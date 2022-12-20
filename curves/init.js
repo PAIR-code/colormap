@@ -28,6 +28,12 @@ window.init = function(){
   window.band = initBand()
 
   window.render()
+
+
+  d3.select('.bands').append('div.annotation')
+    .html('Click to pick a color space to interpolate through')
+  d3.select('.spaces').append('div.annotation')
+    .html('Drag the circles to tweak the colors')
 }
 
 window.render = function(){

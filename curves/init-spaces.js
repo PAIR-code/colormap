@@ -17,6 +17,8 @@ limitations under the License.
 window.initSpaces = function(){
 
   // https://observablehq.com/@fil/oklab-color-space
+  // TODO: also needs interpolation functions 
+  // https://github.com/d3/d3-interpolate/blob/6562b85040f7a9b96efe49b54a77eb6fceafa1c1/src/lab.js
   const gamma = x => (x >= 0.0031308 ? 1.055 * Math.pow(x, 1 / 2.4) - 0.055 : 12.92 * x)
   d3.oklab = (L, a, b) => {
     const l_ = L + 0.3963377774 * a + 0.2158037573 * b;
